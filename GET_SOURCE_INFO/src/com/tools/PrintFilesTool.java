@@ -5,10 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 public class PrintFilesTool {
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
+   public static void main(String[] args) {
         PrintFilesTool pft = new PrintFilesTool();
         String dir = "E:/MY MUSIC/CHAGANTI VENKATESWARLU";
         System.out.println("============================================================================================================");

@@ -1,16 +1,27 @@
 package com.tools;
 
 import java.io.File;
+import java.nio.file.Files;
 import java.util.ArrayList;
 import java.util.Collections;
 
 import com.common.FileUtils;
 import com.common.TechData;
-import com.gmail.latest.Constants;
+import com.common.utils.Constants;
 
+/**
+ * TODO: 
+ * 1. PRINT ALL FILES AND FOLDERS.
+ * 2. DO NOT PRINT UNWANTED FILES.
+ * 3. BUT LISTOUT UNWANTED FILES.
+ * 3. IDENTIFY THE FILES IN WRONG PLACE.
+ * 4. 
+ * @author RAVI
+ *
+ */
 public class CountAndPrintDiresTool {
 	static String dirNM = "E:/TECH VIDEOS";
-
+    static String tabs = "    ";
 	public static void main(String[] args) {
 		CountAndPrintDiresTool cft = new CountAndPrintDiresTool();
 		cft.countFiles(dirNM);
@@ -24,12 +35,6 @@ public class CountAndPrintDiresTool {
 	public void countDirs(String dirNM) {
 		techList = new ArrayList<TechData>();
 		htmlPage = new StringBuilder();
-
-		/*
-		 * for (int i = 0; i < Constants.TECH_VIDEOS.size(); i++) {
-		 * countFiles(Constants.TECH_VIDEOS.get(i)); }
-		 */
-
 		Collections.sort(techList);
 		createView(techList, new File(dirNM));
 	}
@@ -37,7 +42,6 @@ public class CountAndPrintDiresTool {
 	public static void countFiles(String dirNM) {
 		File dir = new File(dirNM);
 		techList = new ArrayList<TechData>();
-		htmlPage = new StringBuilder();
 		// File dir = new File("E:/MY PRESENTATIONS");
 		// File dir = new File("E:/LATEST SOURCE");
 		File[] subDir = dir.listFiles();
@@ -99,11 +103,16 @@ public class CountAndPrintDiresTool {
 				for (File f : files) {
 					if (f.isDirectory()) {
 						count(f);
+						System.out.println(tabs + f.getName());
+						filesList.add(f.getName());
+						tabs = tabs + "     ";
 					} else {
 						count++;
 						filesList.add(f.getName());
+						System.out.println(tabs + String.format( "%50s", f.getName()) +"     "+ f.length());
 					}
 				}
+				tabs = tabs.substring(tabs.length() - 4);
 			}
 		}
 	}

@@ -21,7 +21,7 @@ import java.util.regex.Pattern;
 
 import org.apache.log4j.Logger;
 
-import com.gmail.latest.Constants;
+import com.common.utils.Constants;
 
 public class CommonUtils {
 	static final Logger log = Logger.getLogger(CommonUtils.class);

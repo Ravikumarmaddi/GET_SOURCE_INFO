@@ -7,8 +7,7 @@ import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 
-import com.gmail.latest.Constants;
-import com.gmail.latest.MailUtil;
+import com.common.utils.Constants;
 import com.utils.CommonUtils;
 
 public class FileUtils {
@@ -77,13 +76,24 @@ public class FileUtils {
 		}
 		return 0;
 	}
-
+	public static String createNewFile2(String fileNM) {
+		try {
+			File file = new File("fileNM").getCanonicalFile();
+			if (!file.exists()) {
+				if (new File(fileNM).createNewFile()) {
+				}
+			}
+		} catch (IOException e) {
+			fileNM = "C:/RAVI/DO/INPUT.txt";
+		}
+			return fileNM;
+	}
 	public static void saveStringToFile(String textFileName, String info) {
 		System.out.println("saveProcessedCount()  -->>");
 		FileOutputStream out = null;
 		File savedFile = new File(textFileName);
 		if (savedFile.delete()) {
-			MailUtil.createNewFile(textFileName);
+			createNewFile(textFileName);
 			System.out.println("saveProcessedCount()  -> " + textFileName);
 		} else {
 			textFileName = textFileName.replace(".html", "") + "_"

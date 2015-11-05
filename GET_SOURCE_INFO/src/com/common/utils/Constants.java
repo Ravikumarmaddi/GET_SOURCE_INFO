@@ -1,59 +1,10 @@
-package com.gmail.latest;
+package com.common.utils;
 
 import java.util.ArrayList;
 
 public class Constants {
 
-	// OPERATAION CONTROLERS
-	public static final int SEND_TYPE = 0; // 0- send to latest file -daily,
-											// 1- send to specific file,
-											// 2- send to total,
-											// 3- send to LATEST_N_FILES files,
-											// 4- create total file
 
-	public static final int SKIP_COUNT = 1910;
-	public static final int LATEST_N_FILES = 0; // CHANGE WHEN SEND_TYPE IS 3
-	public static final String SELECTED_FILE = null;// "C:/RAVI/DO/EMAILS/Input2013_Jan_25_10_24_14.txt";
-
-	public static final String JOB_DESCRIPTION_FILE = "C:/RAVI/DO/JD/JD_";
-	public static final boolean NEED_JOB_DESCRIPSTION = true;
-	public static int NEXT_JD = 0;
-
-	// STANDARD VALUES;
-	public static final int MAX_SENT_LIMIT = 900;
-	public static final int MAX_BBC_LIMIT = 15;
-	public static final int MAX_ADDRESS_LIST_LIMIT = 60;// 60;
-	public static final int MAX_JD_FILE_SIZE = 500000; // 100000; DEFAULT//
-
-	public static final String PROFILE = "C:/RAVI/Ravikumar_Maddi_Profile29.doc";
-	public static final String COVER_LETTER = "C:/RAVI/CL29.txt";
-	public static final String SUBJECT = "Ravi - 11 years of experience in Core Java and J2EE, Groovy and Grails, Struts, Spring, Hibernate, Flex, Web services.";
-	public static final String DO_DIR = "C:/RAVI/DO/";
-	public static final String EMAILS_DIR = "C:/RAVI/DO/EMAILS/";
-	public static final String EMAILS_FILE = "C:/RAVI/DO/EMAILS/EMAILSLIST_";
-	public static final String LAST_DIR = "C:/RAVI/DO/LAST/";
-	public static final String TOTAL_DIR = "C:/RAVI/DO/TOTAL/";
-	public static final String TOTAL_FILE = "C:/RAVI/DO/TOTAL/TOTAL_";
-
-	public static final String COUNT_DIR = "C:/RAVI/DO/COUNT/";
-	public static final String PROCESSING_DIR_NM = "C:/RAVI/DO/processing/";
-	public static final String PROCESSED_DIR_NM = "C:/RAVI/DO/processed/";
-	public static final String EMAIL_FOLDER = "JAVA"; // "INTERVIEWS";//
-	public static final String[] EMAIL_FOLDERS = { "JAVA" };// { "INTERVIEWS"
-															// };//
-	public static final String MAIN_USER = "ravi.maddi";// "kumar.sysanalyst";//
-	public static final String MAIN_USER_ID = "koncsvryueytyrvp";// "xqnmsmcqathwdgzb";
-
-	/*
-	 * SEND_TYPE : 0 -
-	 * DAILY...................................................... 1 - NUMBER OF
-	 * LAGACY FILES SEND TOTAL
-	 * FILE....................................................................
-	 * 3 - FILE(SPICIFIC FILE)
-	 * SENDING........................................................ 4 -
-	 * CREATE TOTALs
-	 * FILE..................................................................
-	 */
 	public static final int NUM_LAGACY_FILES = 30;
 
 	public static final ArrayList<String> USERS = new ArrayList<String>() {
